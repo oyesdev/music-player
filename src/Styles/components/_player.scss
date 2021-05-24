@@ -1,0 +1,106 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__time-control {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    input {
+      width: 100%;
+      -webkit-appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    p {
+      padding: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__time-control {
+      width: 90%;
+    }
+  }
+
+  &__play-control {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    margin-top: 1rem;
+
+    &__play-btn {
+      display: block;
+      text-align: center;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      border: 1px solid rgb(161, 156, 156);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__play-control {
+      width: 60%;
+    }
+  }
+}
+
+.isPlaying {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+// * input type=range:
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+// * holds inside the input type="range"
+.track {
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+//? div on the top of the track and input type="range"
+.animate-track {
+  background: rgb(204, 204, 204);
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%); // ! this slides down the div to right;
+  pointer-events: none;
+  padding: 1rem;
+}
