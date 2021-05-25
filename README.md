@@ -1,7 +1,7 @@
 # LibreMusic
 
 ## Demo
-<a href="https://libremusic.netlify.app/">Click Here</a>
+<a href="https://libremusic.netlify.app/"  target="_blank">Click Here</a>
 
 ## Available Scripts
 
